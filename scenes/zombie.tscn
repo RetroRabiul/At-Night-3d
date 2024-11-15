@@ -1,0 +1,72 @@
+[gd_scene load_steps=10 format=3 uid="uid://6734omr4b5ty"]
+
+[ext_resource type="Script" path="res://scripts/zombie.gd" id="1_od8y2"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_0gagg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ep1dp"]
+albedo_color = Color(1.56425e-07, 0.196067, 1.68458e-07, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_mypn2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ll4q"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_udm56"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_btgmg"]
+radius = 0.1
+height = 0.75
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y0csi"]
+albedo_color = Color(0, 0.14902, 0, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_35w42"]
+
+[node name="Zombie" type="CharacterBody3D"]
+slide_on_ceiling = false
+floor_max_angle = 0.872665
+script = ExtResource("1_od8y2")
+
+[node name="zombie" type="Node3D" parent="."]
+
+[node name="body" type="MeshInstance3D" parent="zombie"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_0gagg")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_ep1dp")
+
+[node name="eye" type="MeshInstance3D" parent="zombie"]
+transform = Transform3D(-1.00566e-08, 0, 0.230068, 0, 0.230068, 0, -0.230068, 0, -1.00566e-08, 0.198819, 0.575, -0.407449)
+mesh = SubResource("SphereMesh_mypn2")
+surface_material_override/0 = SubResource("StandardMaterial3D_7ll4q")
+
+[node name="eye2" type="MeshInstance3D" parent="zombie"]
+transform = Transform3D(-1.00566e-08, 0, 0.230068, 0, 0.230068, 0, -0.230068, 0, -1.00566e-08, -0.201181, 0.575, -0.407449)
+mesh = SubResource("SphereMesh_mypn2")
+surface_material_override/0 = SubResource("StandardMaterial3D_udm56")
+
+[node name="hand" type="MeshInstance3D" parent="zombie"]
+transform = Transform3D(1.00687, 0, 0, 0, -0.174841, 0.991574, 0, -0.991574, -0.174841, 0.35, 0.1, -0.519)
+mesh = SubResource("CapsuleMesh_btgmg")
+surface_material_override/0 = SubResource("StandardMaterial3D_y0csi")
+
+[node name="hand2" type="MeshInstance3D" parent="zombie"]
+transform = Transform3D(1.00687, 0, 0, 0, -0.174841, 0.991574, 0, -0.991574, -0.174841, -0.35, 0.1, -0.519)
+mesh = SubResource("CapsuleMesh_btgmg")
+surface_material_override/0 = SubResource("StandardMaterial3D_y0csi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_35w42")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_desired_distance = 5.0
+target_desired_distance = 5.0
+
+[node name="FaceDirection" type="Node3D" parent="."]
+
+[node name="ChaseTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="ChaseTimer" to="." method="_on_chase_timer_timeout"]
