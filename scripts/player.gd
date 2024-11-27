@@ -8,10 +8,13 @@ const SENSITIVITY = 0.0008
 
 var mouse_mode = true
 
-@onready var camera = $Camera3D
+@onready var camera = %Camera
+@onready var use_ray = %UseRayCast
+@onready var hud = $HUD
 
 
 func _ready():
+	GlobalSignal.set_narrative.emit(GlobalVar.collect_torch)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	mouse_mode = false
 
@@ -29,6 +32,16 @@ func _input(event):
 		else:
 			mouse_mode = true
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	
+	if Input.is_action_just_pressed("use"):
+		if use_ray.is_colliding():
+			if use_ray.get_collider().is_in_group("pick_up"):
+				print (use_ray.get_collider().name)
+				GlobalSignal.torch_collected.emit()
+				%torch.visible = true
+				#_pick_up_item(use_ray.get_collider())
+			
+	
 
 
 func _physics_process(delta: float) -> void:
@@ -52,3 +65,13 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+	_check_ray()
+
+func _check_ray():
+	if use_ray.is_colliding():
+		if use_ray.get_collider().is_in_group("highlight"):
+			hud.target_state(true)
+		else:
+			hud.target_state(false)
+	else:
+		hud.target_state(false)

@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8hu0kdxgvbka"]
+
+[ext_resource type="Script" path="res://scripts/torch.gd" id="1_xvl6f"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_t5k3t"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ygd4v"]
+albedo_color = Color(0.316131, 0.331775, 0.345047, 1)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_5sxy0"]
+height = 0.403424
+radius = 0.101614
+
+[node name="torch" type="StaticBody3D" groups=["highlight", "pick_up"]]
+collision_layer = 3
+script = ExtResource("1_xvl6f")
+
+[node name="torch" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_t5k3t")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_ygd4v")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="torch"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+light_energy = 3.0
+spot_range = 9.0
+spot_angle = 36.2793
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+shape = SubResource("CylinderShape3D_5sxy0")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://6734omr4b5ty"]
 
-[ext_resource type="Script" path="res://scripts/zombie.gd" id="1_od8y2"]
+[ext_resource type="Script" path="res://scripts/zombie2.gd" id="1_dohtj"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_0gagg"]
 
@@ -27,7 +27,7 @@ albedo_color = Color(0, 0.14902, 0, 1)
 [node name="Zombie" type="CharacterBody3D"]
 slide_on_ceiling = false
 floor_max_angle = 0.872665
-script = ExtResource("1_od8y2")
+script = ExtResource("1_dohtj")
 
 [node name="zombie" type="Node3D" parent="."]
 
@@ -61,12 +61,13 @@ surface_material_override/0 = SubResource("StandardMaterial3D_y0csi")
 shape = SubResource("CapsuleShape3D_35w42")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
-path_desired_distance = 5.0
-target_desired_distance = 5.0
+path_max_distance = 2.01
 
 [node name="FaceDirection" type="Node3D" parent="."]
 
 [node name="ChaseTimer" type="Timer" parent="."]
-wait_time = 2.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(1, 0, 0, 1)
 
 [connection signal="timeout" from="ChaseTimer" to="." method="_on_chase_timer_timeout"]
