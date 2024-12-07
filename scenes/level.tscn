@@ -1,7 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://dmr4ni3ln3rsg"]
+[gd_scene load_steps=10 format=3 uid="uid://dmr4ni3ln3rsg"]
 
 [ext_resource type="PackedScene" uid="uid://b7gjluyc75skl" path="res://scenes/Player.tscn" id="1_2pn6q"]
-[ext_resource type="PackedScene" uid="uid://dha6w8f47c6s3" path="res://scenes/house.tscn" id="2_d28se"]
 [ext_resource type="PackedScene" uid="uid://6734omr4b5ty" path="res://scenes/zombie.tscn" id="2_p7qs6"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_jgs6y"]
@@ -51,9 +50,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_63l4l")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Ground/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_havnp")
-
-[node name="house" parent="NavigationRegion3D" instance=ExtResource("2_d28se")]
-transform = Transform3D(1.315, 0, 0, 0, 1.315, 0, 0, 0, 1.315, -12.0918, 1.20927, -12.0922)
 
 [node name="Zombie" parent="." instance=ExtResource("2_p7qs6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0845, 2.27764, 16.6831)

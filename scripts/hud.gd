@@ -25,8 +25,8 @@ func _narrate():
 		return
 	
 	%Narrative.text = use_narrative[narrative_index]["text"]
-	var text_colour: String = speakers[use_narrative[narrative_index]["speaker"]]
-	%Narrative.add_theme_color_override("default_color",text_colour)
+	#var text_colour: String = speakers[use_narrative[narrative_index]["speaker"]]
+	#%Narrative.add_theme_color_override("default_color",text_colour)
 	%NarrativeHolder.visible = true
 	narrative_index += 1
 	
@@ -41,5 +41,5 @@ func target_state(state):
 	if state:
 		target.modulate.a = 1.0
 	else:
-		target.modulate.a = 0.5
+		target.modulate.a = 0.2
 	

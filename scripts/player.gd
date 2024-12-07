@@ -14,7 +14,9 @@ var mouse_mode = true
 
 
 func _ready():
-	GlobalSignal.set_narrative.emit(GlobalVar.collect_torch)
+	%torch.visible = false
+	GlobalSignal.set_narrative.emit(GlobalVar.starting_text)
+	#GlobalSignal.set_narrative.emit(GlobalVar.collect_torch)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	mouse_mode = false
 
@@ -40,7 +42,10 @@ func _input(event):
 				GlobalSignal.torch_collected.emit()
 				%torch.visible = true
 				#_pick_up_item(use_ray.get_collider())
-			
+			if use_ray.get_collider().is_in_group("drink"):
+				GlobalSignal.drink.emit()
+			if use_ray.get_collider().is_in_group("eat"):
+				GlobalSignal.eat.emit()
 	
 
 

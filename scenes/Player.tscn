@@ -4,12 +4,15 @@
 [ext_resource type="PackedScene" uid="uid://boxatp25iqco5" path="res://scenes/hud.tscn" id="2_w27po"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_3a6gu"]
+radius = 0.2
+height = 1.8
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xcbwa"]
 albedo_color = Color(0, 0.571956, 0.690375, 1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_braed"]
-height = 3.0
+radius = 0.2
+height = 1.8
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_8y0gh"]
 top_radius = 0.1
@@ -23,7 +26,6 @@ albedo_color = Color(0.316131, 0.331775, 0.345047, 1)
 script = ExtResource("1_1ybgi")
 
 [node name="sprite" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("CapsuleMesh_3a6gu")
 surface_material_override/0 = SubResource("StandardMaterial3D_xcbwa")
 
@@ -32,29 +34,25 @@ shape = SubResource("CapsuleShape3D_braed")
 
 [node name="Camera" type="Node3D" parent="."]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Camera"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 
 [node name="UseRayCast" type="RayCast3D" parent="Camera"]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 target_position = Vector3(0, 0, -2)
 collision_mask = 2
 
 [node name="torch" type="MeshInstance3D" parent="Camera"]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.3, 0.4, -0.6)
-visible = false
+transform = Transform3D(0.4875, 0, 0, 0, -3.04723e-08, 0.4875, 0, -0.697125, -2.13093e-08, 0.3, -0.35125, -0.430288)
 mesh = SubResource("CylinderMesh_8y0gh")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_vdhrn")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera/torch"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-light_energy = 3.0
-spot_range = 9.0
-spot_angle = 36.2793
+transform = Transform3D(0.996195, 0, 0.0871557, 0.0871557, -4.37114e-08, -0.996195, 3.8097e-09, 1, -4.35451e-08, 0, 0, 0)
+spot_range = 7.0
+spot_angle = 29.9988
 
 [node name="HUD" parent="." instance=ExtResource("2_w27po")]

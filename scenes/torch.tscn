@@ -26,7 +26,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ygd4v")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="torch"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-light_energy = 3.0
 spot_range = 9.0
 spot_angle = 36.2793
 
