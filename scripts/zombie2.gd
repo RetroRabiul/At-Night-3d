@@ -7,6 +7,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var chasing : bool = false
 
 func _ready() -> void:
+	$CollisionShape3D.disabled = true
 	hero = get_tree().get_nodes_in_group("player")[0]
 	$ChaseTimer.start()
 	await get_tree().create_timer(1.0).timeout

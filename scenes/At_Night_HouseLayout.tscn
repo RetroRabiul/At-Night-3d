@@ -38,6 +38,7 @@ data = PackedVector3Array(3.2269, 0.6221, -0.5481, 3.2269, -1.5, -0.7876, 3.2269
 [node name="At_Night_HouseLayout (1)" type="Node3D"]
 
 [node name="main_003" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.2146, 0, 0, 0, 1.04731, 0, 0, 0, 1.32063, 0, 0, 0)
 mesh = SubResource("ArrayMesh_bqq16")
 skeleton = NodePath("")
 
