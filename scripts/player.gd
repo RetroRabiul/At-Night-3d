@@ -46,6 +46,17 @@ func _input(event):
 				GlobalSignal.drink.emit()
 			if use_ray.get_collider().is_in_group("eat"):
 				GlobalSignal.eat.emit()
+			if use_ray.get_collider().is_in_group("fuse_box"):
+				if GlobalVar.fuse_box_opened == false:
+					#GlobalVar.fuse_box_opened = true
+					print(GlobalVar.fuse_box_opened)
+					GlobalSignal.fuse_box.emit(true)
+				elif GlobalVar.fuse_box_opened == true:
+					#GlobalVar.fuse_box_opened = false
+					print(GlobalVar.fuse_box_opened)
+					GlobalSignal.fuse_box.emit(false)
+			if use_ray.get_collider().is_in_group("old_fuse"):
+				GlobalSignal.old_fuse.emit()
 	
 
 

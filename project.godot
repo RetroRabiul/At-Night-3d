@@ -30,6 +30,8 @@ player=""
 highlight=""
 pick_up=""
 eat=""
+fuse_box=""
+old_fuse=""
 
 [input]
 

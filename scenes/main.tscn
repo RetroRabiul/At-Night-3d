@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://gcmrssgchw5p"]
+[gd_scene load_steps=28 format=3 uid="uid://gcmrssgchw5p"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_raws0"]
 [ext_resource type="PackedScene" uid="uid://b7gjluyc75skl" path="res://scenes/Player.tscn" id="2_vl77y"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://b2y8klrse08ll" path="res://scenes/sofa_table.tscn" id="15_lj268"]
 [ext_resource type="PackedScene" uid="uid://burj4a2ncjs3u" path="res://scenes/glass.tscn" id="16_kgass"]
 [ext_resource type="PackedScene" uid="uid://c4jjyhf72nlb5" path="res://scenes/table_tv.tscn" id="16_sbx0d"]
+[ext_resource type="PackedScene" uid="uid://bgcd7u3ukktpm" path="res://scenes/fuse_box.tscn" id="19_8u87t"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_fcojs"]
 
@@ -26,7 +27,6 @@ sky_material = SubResource("PhysicalSkyMaterial_fcojs")
 
 [sub_resource type="Environment" id="Environment_rmc5a"]
 background_mode = 2
-background_energy_multiplier = 0.15
 sky = SubResource("Sky_cp3qg")
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_cgco4"]
@@ -152,5 +152,8 @@ shape = SubResource("BoxShape3D_r1ui3")
 
 [node name="torch" parent="." instance=ExtResource("5_wihqu")]
 transform = Transform3D(-0.517355, 0, 0.855771, 0, 1, 0, -0.855771, 0, -0.517355, -3.07257, 1.13202, -4.3909)
+
+[node name="FuseBox" parent="." instance=ExtResource("19_8u87t")]
+transform = Transform3D(-2.81751e-08, 0, 0.644571, 0, 0.644571, 0, -0.644571, 0, -2.81751e-08, -5.17588, 1.97834, 5.73396)
 
 [connection signal="body_entered" from="ZombieStartChasingArea" to="." method="_on_zombie_start_chasing_area_body_entered"]
