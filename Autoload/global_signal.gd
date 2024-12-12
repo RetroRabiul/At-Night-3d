@@ -11,3 +11,5 @@ signal eat()
 signal fuse_box(state)
 
 signal old_fuse()
+
+signal drower()

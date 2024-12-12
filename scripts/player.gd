@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 
-const SPEED = 5.0
+const SPEED = 3.0
 const JUMP_VELOCITY = 4.5
 
 const SENSITIVITY = 0.0008
@@ -57,6 +57,10 @@ func _input(event):
 					GlobalSignal.fuse_box.emit(false)
 			if use_ray.get_collider().is_in_group("old_fuse"):
 				GlobalSignal.old_fuse.emit()
+			if use_ray.get_collider().is_in_group("drower"):
+				GlobalSignal.drower.emit()
+				
+				
 	
 
 

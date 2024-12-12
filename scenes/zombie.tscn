@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://6734omr4b5ty"]
+[gd_scene load_steps=10 format=3 uid="uid://6734omr4b5ty"]
 
 [ext_resource type="Script" path="res://scripts/zombie2.gd" id="1_dohtj"]
+[ext_resource type="PackedScene" uid="uid://ce7gyejrwvmmh" path="res://scenes/zombie_anim.tscn" id="2_38d4p"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_0gagg"]
 radius = 0.3
@@ -30,7 +31,11 @@ slide_on_ceiling = false
 floor_max_angle = 0.872665
 script = ExtResource("1_dohtj")
 
+[node name="zombie2" parent="." instance=ExtResource("2_38d4p")]
+transform = Transform3D(-5.99357, 0, 1.60597, 0, 6.205, 0, -1.60597, 0, -5.99357, 0, -0.879715, 0)
+
 [node name="zombie" type="Node3D" parent="."]
+visible = false
 
 [node name="body" type="MeshInstance3D" parent="zombie"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
@@ -74,3 +79,5 @@ light_energy = 0.5
 shadow_enabled = true
 
 [connection signal="timeout" from="ChaseTimer" to="." method="_on_chase_timer_timeout"]
+
+[editable path="zombie2"]

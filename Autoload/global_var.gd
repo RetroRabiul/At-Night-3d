@@ -8,7 +8,7 @@ var torch_collected = false
 var drink_water = false
 var ate_fruit = false
 var fuse_box_opened = false
-
+var drower_opened = false
 
 var starting_text:Array[Dictionary] = [
 	{"text": "It is Dark..."},

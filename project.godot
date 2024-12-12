@@ -32,6 +32,7 @@ pick_up=""
 eat=""
 fuse_box=""
 old_fuse=""
+drower=""
 
 [input]
 
