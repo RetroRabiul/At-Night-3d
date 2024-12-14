@@ -1,26 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://6734omr4b5ty"]
+[gd_scene load_steps=4 format=3 uid="uid://6734omr4b5ty"]
 
 [ext_resource type="Script" path="res://scripts/zombie2.gd" id="1_dohtj"]
 [ext_resource type="PackedScene" uid="uid://ce7gyejrwvmmh" path="res://scenes/zombie_anim.tscn" id="2_38d4p"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_0gagg"]
-radius = 0.3
-height = 1.8
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ep1dp"]
-albedo_color = Color(1.56425e-07, 0.196067, 1.68458e-07, 1)
-
-[sub_resource type="SphereMesh" id="SphereMesh_mypn2"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ll4q"]
-albedo_color = Color(1, 0, 0, 1)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_btgmg"]
-radius = 0.1
-height = 0.75
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y0csi"]
-albedo_color = Color(0, 0.14902, 0, 1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_35w42"]
 radius = 0.2
@@ -88,35 +69,6 @@ bones/61/rotation = Quaternion(-0.265959, -0.0686394, -0.0105927, 0.961479)
 bones/62/rotation = Quaternion(0.429676, 0.0677475, 0.102673, 0.894565)
 bones/63/rotation = Quaternion(0.262176, 0.0671196, -0.0182731, 0.96251)
 
-[node name="zombie" type="Node3D" parent="."]
-visible = false
-
-[node name="body" type="MeshInstance3D" parent="zombie"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-mesh = SubResource("CapsuleMesh_0gagg")
-skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_ep1dp")
-
-[node name="eye" type="MeshInstance3D" parent="zombie"]
-transform = Transform3D(-4.30117e-09, 0, 0.0983992, 0, 0.0983992, 0, -0.0983992, 0, -4.30117e-09, 0.0995768, 0.575, -0.266636)
-mesh = SubResource("SphereMesh_mypn2")
-surface_material_override/0 = SubResource("StandardMaterial3D_7ll4q")
-
-[node name="eye2" type="MeshInstance3D" parent="zombie"]
-transform = Transform3D(-4.30117e-09, 0, 0.0983992, 0, 0.0983992, 0, -0.0983992, 0, -4.30117e-09, -0.1, 0.575, -0.267)
-mesh = SubResource("SphereMesh_mypn2")
-surface_material_override/0 = SubResource("StandardMaterial3D_7ll4q")
-
-[node name="hand" type="MeshInstance3D" parent="zombie"]
-transform = Transform3D(0.612047, 0, 0, 0, -0.106281, 0.602749, 0, -0.602749, -0.106281, 0.207314, 0.283833, -0.309124)
-mesh = SubResource("CapsuleMesh_btgmg")
-surface_material_override/0 = SubResource("StandardMaterial3D_y0csi")
-
-[node name="hand2" type="MeshInstance3D" parent="zombie"]
-transform = Transform3D(0.612047, 0, 0, 0, -0.106281, 0.602749, 0, -0.602749, -0.106281, -0.207, 0.284, -0.309)
-mesh = SubResource("CapsuleMesh_btgmg")
-surface_material_override/0 = SubResource("StandardMaterial3D_y0csi")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.148718)
 shape = SubResource("CapsuleShape3D_35w42")
@@ -132,6 +84,7 @@ path_postprocessing = 1
 light_color = Color(1, 0, 0, 1)
 light_energy = 0.5
 shadow_enabled = true
+omni_range = 2.15825
 
 [connection signal="timeout" from="ChaseTimer" to="." method="_on_chase_timer_timeout"]
 
