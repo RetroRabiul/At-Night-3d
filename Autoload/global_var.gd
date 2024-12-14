@@ -9,6 +9,26 @@ var drink_water = false
 var ate_fruit = false
 var fuse_box_opened = false
 var drower_opened = false
+var ket_collected = false
+
+var locked_text:Array[Dictionary] = [
+	{"text": "It is locked"},
+	{"text": "I need a key to open"}
+	
+]
+
+var achievement_text:Array[Dictionary] = [
+	{"text": "achievement"},
+	{"text": "Got things"}
+	
+]
+
+
+var ket_text:Array[Dictionary] = [
+	{"text": "Retro left his keys..."},
+	{"text": "I can use this to OPEN things"}
+	
+]
 
 var starting_text:Array[Dictionary] = [
 	{"text": "It is Dark..."},
@@ -37,8 +57,7 @@ var old_fuse_test:Array[Dictionary] = [
 ]
 
 
-var collect_torch:Array[Dictionary] = [
-	{"text": "Get the torch", "speaker":"player"},
-	{"text": "HELLO!!!", "speaker":"hacker"}
+var collect_torch_text:Array[Dictionary] = [
+	{"text": "I can see Now.."},
 	
 ]

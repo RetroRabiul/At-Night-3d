@@ -36,10 +36,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -201.0
-offset_top = -108.0
-offset_right = 201.0
-offset_bottom = -68.0
+offset_left = -257.0
+offset_top = -103.0
+offset_right = 263.0
+offset_bottom = -48.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/default_color = Color(0, 0.401501, 0.649272, 1)
@@ -48,6 +48,33 @@ theme_override_font_sizes/normal_font_size = 30
 theme_override_styles/background = SubResource("StyleBoxFlat_2woij")
 theme_override_styles/normal = SubResource("StyleBoxFlat_0gtpb")
 text = "I need a torch."
+horizontal_alignment = 1
+
+[node name="AchievementHolder" type="Control" parent="."]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Achievement" type="RichTextLabel" parent="AchievementHolder"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 346.0
+offset_top = 441.0
+offset_right = 772.0
+offset_bottom = 496.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/default_color = Color(0, 0.401501, 0.649272, 1)
+theme_override_fonts/normal_font = ExtResource("1_qxyl8")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_styles/background = SubResource("StyleBoxFlat_2woij")
+theme_override_styles/normal = SubResource("StyleBoxFlat_0gtpb")
 horizontal_alignment = 1
 
 [node name="Target" type="TextureRect" parent="."]
@@ -68,3 +95,9 @@ grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 pivot_offset = Vector2(20, 20)
 texture = ExtResource("3_awvo7")
+
+[node name="Achive_Text_Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 2.0
+
+[connection signal="timeout" from="Achive_Text_Timer" to="." method="_on_achive_text_timer_timeout"]

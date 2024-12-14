@@ -33,6 +33,7 @@ eat=""
 fuse_box=""
 old_fuse=""
 drower=""
+key=""
 
 [input]
 

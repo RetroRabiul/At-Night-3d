@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfohx82jcshf6"]
+
+[ext_resource type="Script" path="res://scripts/key.gd" id="1_4vl87"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_8v7hj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qvpnq"]
+albedo_color = Color(0.150831, 0.242189, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yh8eb"]
+size = Vector3(1.35352, 0.223633, 0.233398)
+
+[node name="key" type="StaticBody3D" groups=["highlight", "key"]]
+collision_layer = 3
+script = ExtResource("1_4vl87")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.34891, 0, 0, 0, 0.21662, 0, 0, 0, 0.224323, 0, 0, 0)
+mesh = SubResource("BoxMesh_8v7hj")
+surface_material_override/0 = SubResource("StandardMaterial3D_qvpnq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_yh8eb")

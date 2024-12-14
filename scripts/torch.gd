@@ -7,6 +7,7 @@ func _ready() -> void:
 
 func _torch_collected() -> void:
 	GlobalVar.torch_collected = true
+	GlobalSignal.set_achievement.emit(GlobalVar.collect_torch_text)
 	GlobalSignal.set_narrative.emit(GlobalVar.drinking_text)
 	print("got the torch")
 	call_deferred("_delete_torch")

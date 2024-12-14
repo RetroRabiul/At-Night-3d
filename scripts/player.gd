@@ -60,7 +60,8 @@ func _input(event):
 			if use_ray.get_collider().is_in_group("drower"):
 				GlobalSignal.drower.emit()
 				
-				
+			if use_ray.get_collider().is_in_group("key"):
+				GlobalSignal.key.emit()
 	
 
 

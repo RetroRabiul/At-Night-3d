@@ -2,6 +2,8 @@ extends Node
 
 signal set_narrative(narrative)
 
+signal set_achievement(achievement)
+
 signal torch_collected()
 
 signal drink()
@@ -13,3 +15,5 @@ signal fuse_box(state)
 signal old_fuse()
 
 signal drower()
+
+signal key()
