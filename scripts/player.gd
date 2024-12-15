@@ -62,6 +62,11 @@ func _input(event):
 				
 			if use_ray.get_collider().is_in_group("key"):
 				GlobalSignal.key.emit()
+				
+			if use_ray.get_collider().is_in_group("trap"):
+				GlobalSignal.trap.emit()
+			if use_ray.get_collider().is_in_group("new_fuse"):
+				GlobalSignal.new_fuse.emit()
 	
 
 

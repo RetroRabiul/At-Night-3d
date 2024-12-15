@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://boxatp25iqco5"]
+[gd_scene load_steps=8 format=3 uid="uid://boxatp25iqco5"]
 
 [ext_resource type="Script" path="res://scripts/hud.gd" id="1_q6r5s"]
 [ext_resource type="FontFile" uid="uid://darxorlc5k5ar" path="res://assets/fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf" id="1_qxyl8"]
 [ext_resource type="Texture2D" uid="uid://cogs80v6n5brs" path="res://assets/target.png" id="3_awvo7"]
+[ext_resource type="Texture2D" uid="uid://doq7wdjdtq8hc" path="res://assets/fuse.png" id="4_bh45k"]
+[ext_resource type="Texture2D" uid="uid://c61f65wt81ndh" path="res://assets/key.png" id="5_4h4kd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2woij"]
 bg_color = Color(0, 0, 0, 0.65098)
@@ -99,5 +101,19 @@ texture = ExtResource("3_awvo7")
 [node name="Achive_Text_Timer" type="Timer" parent="."]
 unique_name_in_owner = true
 wait_time = 2.0
+
+[node name="Fuse" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(924, 59)
+scale = Vector2(5, 5)
+texture = ExtResource("4_bh45k")
+
+[node name="Key" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(1053, 48)
+scale = Vector2(11.49, 11.49)
+texture = ExtResource("5_4h4kd")
 
 [connection signal="timeout" from="Achive_Text_Timer" to="." method="_on_achive_text_timer_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bl0ug8x3jm41q"]
+[gd_scene load_steps=7 format=3 uid="uid://bl0ug8x3jm41q"]
 
 [ext_resource type="Script" path="res://scripts/old_fuse.gd" id="1_7lp7b"]
 
@@ -10,15 +10,25 @@ albedo_color = Color(0.858807, 4.71681e-06, 1.15514e-06, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_kkvjp"]
 size = Vector3(0.275635, 0.621338, 0.296875)
 
+[sub_resource type="BoxMesh" id="BoxMesh_da6n0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3fgsa"]
+albedo_color = Color(0, 0.457409, 0.829347, 1)
+
 [node name="OldFuse" type="StaticBody3D" groups=["highlight", "old_fuse"]]
 transform = Transform3D(0.59393, 0, 0, 0, 0.59393, 0, 0, 0, 0.59393, 0, 0, 0)
 collision_layer = 3
 script = ExtResource("1_7lp7b")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="old" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.278411, 0, 0, 0, 0.619194, 0, 0, 0, 0.280632, 0, 0, 0)
 mesh = SubResource("BoxMesh_ulna8")
 surface_material_override/0 = SubResource("StandardMaterial3D_r76uj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_kkvjp")
+
+[node name="new" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.278411, 0, 0, 0, 0.619194, 0, 0, 0, 0.280632, 0, 0, 0)
+mesh = SubResource("BoxMesh_da6n0")
+surface_material_override/0 = SubResource("StandardMaterial3D_3fgsa")

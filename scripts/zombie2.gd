@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const SPEED = 1.0
+const SPEED = 4.0
 var hero
 @export var turn_speed = 4.0
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")

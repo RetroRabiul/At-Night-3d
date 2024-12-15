@@ -11,7 +11,6 @@ func _drink():
 	GlobalSignal.set_narrative.emit(GlobalVar.eating_text)
 	$water.visible = false
 	
-	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

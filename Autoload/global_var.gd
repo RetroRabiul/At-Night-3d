@@ -10,6 +10,8 @@ var ate_fruit = false
 var fuse_box_opened = false
 var drower_opened = false
 var ket_collected = false
+var trap_opened = false
+var new_fuse_collected = false
 
 var locked_text:Array[Dictionary] = [
 	{"text": "It is locked"},
@@ -17,12 +19,18 @@ var locked_text:Array[Dictionary] = [
 	
 ]
 
-var achievement_text:Array[Dictionary] = [
-	{"text": "achievement"},
-	{"text": "Got things"}
+var search_fusebox:Array[Dictionary] = [
+	{"text": "I should see"},
+	{"text": "The FuseBox"}
 	
 ]
 
+var zombie_sound_text:Array[Dictionary] = [
+	{"text": "Huh..."},
+	{"text": "What was that."},
+	{"text": "I should hurry up"}
+	
+]
 
 var ket_text:Array[Dictionary] = [
 	{"text": "Retro left his keys..."},
@@ -50,9 +58,14 @@ var eating_text:Array[Dictionary] = [
 ]
 
 
-var old_fuse_test:Array[Dictionary] = [
+var old_fuse_text:Array[Dictionary] = [
 	{"text": "This fuse is ruined"},
 	{"text": "I need to find a new one"}
+	
+]
+
+var new_fuse_text:Array[Dictionary] = [
+	{"text": "I got a new fuse"},
 	
 ]
 

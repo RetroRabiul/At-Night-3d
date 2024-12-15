@@ -14,6 +14,10 @@ signal fuse_box(state)
 
 signal old_fuse()
 
+signal new_fuse()
+
 signal drower()
 
 signal key()
+
+signal trap()

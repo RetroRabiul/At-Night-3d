@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgpina1flq64t"]
+
+[ext_resource type="Script" path="res://scripts/new_fuse.gd" id="1_u8lk7"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7fnr8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sqmpl"]
+albedo_color = Color(0, 0.457409, 0.829347, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vuphr"]
+size = Vector3(0.275635, 0.621338, 0.296875)
+
+[node name="NewFuse" type="StaticBody3D" groups=["highlight", "new_fuse"]]
+collision_layer = 3
+script = ExtResource("1_u8lk7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.278411, 0, 0, 0, 0.619194, 0, 0, 0, 0.280632, 0, 0, 0)
+mesh = SubResource("BoxMesh_7fnr8")
+surface_material_override/0 = SubResource("StandardMaterial3D_sqmpl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_vuphr")

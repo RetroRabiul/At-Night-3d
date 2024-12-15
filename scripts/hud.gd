@@ -9,9 +9,20 @@ var achievement_index:int = 0
 @onready var target = $Target
 
 func _ready() -> void:
+	%Fuse.hide()
+	%Key.hide()
 	%AchievementHolder.visible = false
+	GlobalSignal.new_fuse.connect(_fuse_icon)
+	GlobalSignal.key.connect(_key_icon)
 	GlobalSignal.set_narrative.connect(_set_narrative)
 	GlobalSignal.set_achievement.connect(_set_achievement)
+
+func _fuse_icon():
+	%Fuse.show()
+
+
+func _key_icon():
+	%Key.show()
 
 func _set_narrative(narrative):
 	use_narrative = narrative

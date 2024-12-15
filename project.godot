@@ -34,6 +34,8 @@ fuse_box=""
 old_fuse=""
 drower=""
 key=""
+trap=""
+new_fuse=""
 
 [input]
 
