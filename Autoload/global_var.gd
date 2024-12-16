@@ -13,6 +13,12 @@ var ket_collected = false
 var trap_opened = false
 var new_fuse_collected = false
 
+var lights_on_text:Array[Dictionary] = [
+	{"text": "I should trap the Zombie in the basement"}
+	
+]
+
+
 var locked_text:Array[Dictionary] = [
 	{"text": "It is locked"},
 	{"text": "I need a key to open"}
@@ -20,8 +26,7 @@ var locked_text:Array[Dictionary] = [
 ]
 
 var search_fusebox:Array[Dictionary] = [
-	{"text": "I should see"},
-	{"text": "The FuseBox"}
+	{"text": "I need to get the light back on."},
 	
 ]
 

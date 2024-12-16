@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://c2yot57endck3"]
+[gd_scene load_steps=24 format=4 uid="uid://c2yot57endck3"]
 
 [ext_resource type="Texture2D" uid="uid://ci3b0keoimi73" path="res://assets/glb/fruits_istockphoto-512401658-612x612.jpg" id="1_cqyva"]
 [ext_resource type="Script" path="res://scripts/fruits.gd" id="1_qm5y6"]
@@ -122,6 +122,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_n2747")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2sm4d"]
+albedo_color = Color(0.681549, 0.517533, 0.388669, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_haqkj"]
 resource_name = "Material"
@@ -293,6 +296,7 @@ skeleton = NodePath("")
 [node name="Boul" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.124248, -0.292168, -0.227021)
 mesh = SubResource("ArrayMesh_hbmym")
+surface_material_override/0 = SubResource("StandardMaterial3D_2sm4d")
 
 [node name="Cerry" type="Node3D" parent="."]
 transform = Transform3D(1.08941, 0, 0, 0, 1.08941, 0, 0, 0, 1.08941, 0.0328884, 0.0416782, 0.0453913)

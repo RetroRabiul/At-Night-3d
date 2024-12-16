@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/zombie.mp3-8a37d17ce2bb6a5888dabd0e4e89d9e7.m
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

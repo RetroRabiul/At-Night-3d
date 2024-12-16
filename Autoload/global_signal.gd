@@ -21,3 +21,6 @@ signal drower()
 signal key()
 
 signal trap()
+
+signal lights_on()
+signal hide_torch()

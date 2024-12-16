@@ -16,10 +16,14 @@ var mouse_mode = true
 func _ready():
 	%torch.visible = false
 	GlobalSignal.set_narrative.emit(GlobalVar.starting_text)
+	GlobalSignal.hide_torch.connect(_hide_torch)
 	#GlobalSignal.set_narrative.emit(GlobalVar.collect_torch)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	mouse_mode = false
 
+
+func _hide_torch():
+	%torch.visible = false
 
 func _input(event):
 	if event is InputEventMouseMotion and !mouse_mode:

@@ -3,7 +3,16 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$Lights.hide()
 	$Zombie.visible = false
+	GlobalSignal.lights_on.connect(_lights_on)
+
+
+func _lights_on():
+	$Lights.show()
+	GlobalSignal.hide_torch.emit()
+	GlobalSignal.set_narrative.emit(GlobalVar.lights_on_text)
+
 
 	#GlobalSignal.torch_collected.connect(_torch_collected)
 #
@@ -33,6 +42,7 @@ func _show_zombie():
 	$Zombie.visible = true
 	$Zombie/CollisionShape3D.disabled = false
 	$Zombie/ZombieSound.play()
+	$Zombie/FootDraggingSound.play()
 
 func _disable_collision() -> void:
 	%CollisionShape3D.disabled = true

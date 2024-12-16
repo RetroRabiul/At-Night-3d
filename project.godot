@@ -36,6 +36,7 @@ drower=""
 key=""
 trap=""
 new_fuse=""
+bed=""
 
 [input]
 
