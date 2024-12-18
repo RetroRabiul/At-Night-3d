@@ -38,15 +38,15 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -332.0
-offset_top = -103.0
-offset_right = 338.0
-offset_bottom = -48.0
+offset_left = -960.0
+offset_top = -220.0
+offset_right = 960.0
 grow_horizontal = 2
 grow_vertical = 0
+pivot_offset = Vector2(960, 0)
 theme_override_colors/default_color = Color(0, 0.401501, 0.649272, 1)
 theme_override_fonts/normal_font = ExtResource("1_qxyl8")
-theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/normal_font_size = 60
 theme_override_styles/background = SubResource("StyleBoxFlat_2woij")
 theme_override_styles/normal = SubResource("StyleBoxFlat_0gtpb")
 text = "I need a torch."
@@ -54,9 +54,12 @@ horizontal_alignment = 1
 
 [node name="AchievementHolder" type="Control" parent="."]
 unique_name_in_owner = true
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Achievement" type="RichTextLabel" parent="AchievementHolder"]
 unique_name_in_owner = true
@@ -66,15 +69,16 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 346.0
-offset_top = 441.0
-offset_right = 772.0
-offset_bottom = 496.0
+offset_left = -960.0
+offset_top = -408.0
+offset_right = 960.0
+offset_bottom = -258.0
 grow_horizontal = 2
 grow_vertical = 0
+pivot_offset = Vector2(960, 150)
 theme_override_colors/default_color = Color(0, 0.401501, 0.649272, 1)
 theme_override_fonts/normal_font = ExtResource("1_qxyl8")
-theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/normal_font_size = 50
 theme_override_styles/background = SubResource("StyleBoxFlat_2woij")
 theme_override_styles/normal = SubResource("StyleBoxFlat_0gtpb")
 horizontal_alignment = 1
@@ -102,17 +106,26 @@ texture = ExtResource("3_awvo7")
 unique_name_in_owner = true
 wait_time = 2.0
 
-[node name="Fuse" type="Sprite2D" parent="."]
+[node name="Icons" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="Fuse" type="Sprite2D" parent="Icons"]
 unique_name_in_owner = true
 texture_filter = 1
-position = Vector2(924, 59)
+position = Vector2(-260, 59)
 scale = Vector2(5, 5)
 texture = ExtResource("4_bh45k")
 
-[node name="Key" type="Sprite2D" parent="."]
+[node name="Key" type="Sprite2D" parent="Icons"]
 unique_name_in_owner = true
 texture_filter = 1
-position = Vector2(1053, 48)
+position = Vector2(-107, 48)
 scale = Vector2(11.49, 11.49)
 texture = ExtResource("5_4h4kd")
 

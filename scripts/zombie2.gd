@@ -13,6 +13,14 @@ func _ready() -> void:
 	$ChaseTimer.start()
 	await get_tree().create_timer(1.0).timeout
 	chasing = true
+	GlobalSignal.zombie_trapped.connect(_zombie_trapped)
+
+
+func _zombie_trapped():
+	#$CollisionShape3D.disabled = true
+	visible = false
+	GlobalVar.zombie_trapped = true
+
 
 func _move_towards(delta):
 	var targetPos = $NavigationAgent3D.get_next_path_position()

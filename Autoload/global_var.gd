@@ -13,6 +13,9 @@ var ket_collected = false
 var trap_opened = false
 var new_fuse_collected = false
 
+var zombie_trapped = false 
+
+
 var lights_on_text:Array[Dictionary] = [
 	{"text": "I should trap the Zombie in the basement"}
 	

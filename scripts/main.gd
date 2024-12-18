@@ -11,7 +11,8 @@ func _ready() -> void:
 func _lights_on():
 	$Lights.show()
 	GlobalSignal.hide_torch.emit()
-	GlobalSignal.set_narrative.emit(GlobalVar.lights_on_text)
+	if GlobalVar.zombie_trapped == false:
+		GlobalSignal.set_narrative.emit(GlobalVar.lights_on_text)
 
 
 	#GlobalSignal.torch_collected.connect(_torch_collected)
@@ -46,3 +47,11 @@ func _show_zombie():
 
 func _disable_collision() -> void:
 	%CollisionShape3D.disabled = true
+
+
+func _on_trap_body_entered(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		print("player trapped")
+	elif body.is_in_group("zombie"):
+		print("zombie trapped")
+		GlobalSignal.zombie_trapped.emit()
