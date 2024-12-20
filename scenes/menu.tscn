@@ -1,0 +1,92 @@
+[gd_scene load_steps=12 format=3 uid="uid://6fhu4f2ebxpy"]
+
+[ext_resource type="FontFile" uid="uid://cx5qbw7hfglc7" path="res://assets/fonts/Comfortaa/static/Comfortaa-SemiBold.ttf" id="1_1bmnq"]
+[ext_resource type="Texture2D" uid="uid://ct81ctyadust8" path="res://assets/Player.png" id="1_8v4ck"]
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_ti26j"]
+[ext_resource type="AudioStream" uid="uid://cql0sltjyhnun" path="res://assets/Audios/Event6.mp3" id="7_b5yyq"]
+[ext_resource type="AudioStream" uid="uid://b40gxxj4c8s8y" path="res://assets/Audios/button.mp3" id="8_22cfe"]
+
+[sub_resource type="Gradient" id="Gradient_li1vq"]
+colors = PackedColorArray(0, 0, 0, 0, 1, 0, 0, 0.709804)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_muqch"]
+gradient = SubResource("Gradient_li1vq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_63dcg"]
+texture = SubResource("GradientTexture2D_muqch")
+
+[sub_resource type="Gradient" id="Gradient_k2oyj"]
+colors = PackedColorArray(0, 0, 0, 1, 0.631035, 0.631035, 0.631035, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7v71l"]
+gradient = SubResource("Gradient_k2oyj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m2tx0"]
+texture = SubResource("GradientTexture2D_7v71l")
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_ti26j")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="Player" type="Sprite2D" parent="."]
+modulate = Color(0.329158, 0.329158, 0.329158, 1)
+texture_filter = 1
+position = Vector2(1023, 455)
+scale = Vector2(4.28302, 4.28302)
+texture = ExtResource("1_8v4ck")
+
+[node name="PlayButton" type="Button" parent="."]
+texture_filter = 1
+offset_left = 1346.0
+offset_top = 685.0
+offset_right = 1918.0
+offset_bottom = 897.0
+theme_override_colors/font_hover_color = Color(0.77613, 3.49189e-05, 1.97336e-05, 1)
+theme_override_colors/font_pressed_color = Color(0.518098, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_1bmnq")
+theme_override_font_sizes/font_size = 180
+theme_override_styles/hover = SubResource("StyleBoxTexture_63dcg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_m2tx0")
+text = "Play"
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = 13.0
+offset_top = 474.0
+offset_right = 793.0
+offset_bottom = 925.0
+theme_override_colors/font_color = Color(0.780392, 0.301961, 0.227451, 1)
+theme_override_fonts/font = ExtResource("1_1bmnq")
+theme_override_font_sizes/font_size = 200
+text = "AT 
+NIGHT"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+texture_filter = 1
+offset_left = 631.0
+offset_top = 650.0
+offset_right = 743.0
+offset_bottom = 729.0
+theme_override_colors/font_color = Color(0.780392, 0.301961, 0.227451, 1)
+theme_override_fonts/font = ExtResource("1_1bmnq")
+theme_override_font_sizes/font_size = 70
+text = "3D"
+
+[node name="BackgroundAudio" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(960, 540)
+stream = ExtResource("7_b5yyq")
+autoplay = true
+max_distance = 1000.0
+
+[node name="ButtonAudio" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(960, 540)
+stream = ExtResource("8_22cfe")
+max_distance = 13470.0
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]

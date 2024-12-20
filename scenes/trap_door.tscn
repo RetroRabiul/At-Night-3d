@@ -5,22 +5,7 @@
 [sub_resource type="BoxMesh" id="BoxMesh_pub0n"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iwoxd"]
-size = Vector3(0.935547, 0.1, 0.932617)
-
-[sub_resource type="Animation" id="Animation_umrn4"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
+size = Vector3(0.935547, 0.0666504, 0.932617)
 
 [sub_resource type="Animation" id="Animation_3sqry"]
 resource_name = "close"
@@ -54,6 +39,21 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, 0), Vector3(-1.39626, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_umrn4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3ut0j"]
 _data = {
 &"close": SubResource("Animation_3sqry"),
@@ -68,7 +68,7 @@ collision_layer = 3
 script = ExtResource("1_qigvt")
 
 [node name="TrapDoor" type="MeshInstance3D" parent="Hinge"]
-transform = Transform3D(0.935, 0, 0, 0, 0.1, 0, 0, 0, 0.935, 0, 0.0511431, 0.4715)
+transform = Transform3D(0.935, 0, 0, 0, 0.0644006, 0, 0, 0, 0.935, 0, 0.0511431, 0.4715)
 mesh = SubResource("BoxMesh_pub0n")
 skeleton = NodePath("../../..")
 

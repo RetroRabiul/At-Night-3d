@@ -13,17 +13,13 @@ func _lights_on():
 	GlobalSignal.hide_torch.emit()
 	if GlobalVar.zombie_trapped == false:
 		GlobalSignal.set_narrative.emit(GlobalVar.lights_on_text)
-
-
-	#GlobalSignal.torch_collected.connect(_torch_collected)
-#
-#func _torch_collected() -> void:
-	#print("got the torch")
-	#call_deferred("_delete_torch")
-	#
-	#
-#func _delete_torch():
-	#$torch.queue_free()
+	elif GlobalVar.zombie_trapped == true:
+		if GlobalVar.ate_fruit == false:
+			GlobalSignal.set_narrative.emit(GlobalVar.eating_text)
+		elif GlobalVar.drink_water == false:
+			GlobalSignal.set_narrative.emit(GlobalVar.drinking_text)
+		else:
+			GlobalSignal.set_narrative.emit(GlobalVar.sleeping_text)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

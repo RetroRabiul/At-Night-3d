@@ -101,4 +101,4 @@ libraries = {
 }
 
 [node name="OldFuse" parent="." instance=ExtResource("2_doew7")]
-transform = Transform3D(0.59393, 0, 0, 0, 0.59393, 0, 0, 0, 0.59393, 0.559036, -0.214967, -0.144668)
+transform = Transform3D(0.59393, 0, 0, 0, 0.59393, 0, 0, 0, 0.59393, 0.559036, -0.0954792, -0.144668)

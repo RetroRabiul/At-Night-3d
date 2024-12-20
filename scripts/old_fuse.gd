@@ -11,6 +11,7 @@ func _old_fuse():
 	if GlobalVar.new_fuse_collected:
 		$old.hide()
 		$new.show()
+		GlobalVar.lights_on = true
 		GlobalSignal.lights_on.emit()
 	else:
 		GlobalSignal.set_narrative.emit(GlobalVar.old_fuse_text)

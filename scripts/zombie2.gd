@@ -18,7 +18,6 @@ func _ready() -> void:
 
 func _zombie_trapped():
 	#$CollisionShape3D.disabled = true
-	visible = false
 	GlobalVar.zombie_trapped = true
 
 
@@ -41,3 +40,8 @@ func _physics_process(delta: float) -> void:
 
 func _on_chase_timer_timeout() -> void:
 	$NavigationAgent3D.set_target_position(hero.global_position)
+
+
+func _on_player_die_area_body_entered(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		print("player died")

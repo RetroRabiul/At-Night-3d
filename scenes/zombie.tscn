@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://6734omr4b5ty"]
+[gd_scene load_steps=7 format=3 uid="uid://6734omr4b5ty"]
 
 [ext_resource type="Script" path="res://scripts/zombie2.gd" id="1_dohtj"]
 [ext_resource type="PackedScene" uid="uid://ce7gyejrwvmmh" path="res://scenes/zombie_anim.tscn" id="2_38d4p"]
@@ -8,6 +8,10 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_35w42"]
 radius = 0.2
 height = 1.8
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_a2gf4"]
+radius = 0.227762
+height = 0.855486
 
 [node name="Zombie" type="CharacterBody3D" groups=["zombie"]]
 slide_on_ceiling = false
@@ -66,6 +70,13 @@ volume_db = -10.0
 [node name="FootDraggingSound" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("4_iygan")
 
+[node name="Player_Die_Area" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player_Die_Area"]
+transform = Transform3D(1, 0, 0, 0, -0.104233, 0.994553, 0, -0.994553, -0.104233, 0, 0.459096, -0.399027)
+shape = SubResource("CapsuleShape3D_a2gf4")
+
 [connection signal="timeout" from="ChaseTimer" to="." method="_on_chase_timer_timeout"]
+[connection signal="body_entered" from="Player_Die_Area" to="." method="_on_player_die_area_body_entered"]
 
 [editable path="zombie2"]

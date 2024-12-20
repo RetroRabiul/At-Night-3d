@@ -396,9 +396,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t1aco"]
 _data = {
-&"RESET": SubResource("Animation_1t0y4"),
 &"open_drower": SubResource("Animation_5vklq"),
-&"close_drower": SubResource("Animation_k3tt0")
+&"close_drower": SubResource("Animation_k3tt0"),
+&"RESET": SubResource("Animation_1t0y4")
 }
 
 [node name="Locked_Table" type="Node3D"]
@@ -432,7 +432,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.387024, -0.110657, -0.45300
 shape = SubResource("BoxShape3D_2mivq")
 
 [node name="NewFuse" parent="Drower" instance=ExtResource("2_m6lya")]
-transform = Transform3D(-1.59547e-08, -0.365, 0, 0.365, -1.59547e-08, 0, 0, 0, 0.365, 0.160771, -0.12588, -0.433131)
+transform = Transform3D(0.365, 0, 0, 0, 0.365, 0, 0, 0, 0.365, 0.188868, -0.12588, -0.419988)
 
 [node name="Cube" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_dtjij")

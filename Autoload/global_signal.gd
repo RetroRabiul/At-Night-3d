@@ -26,3 +26,4 @@ signal lights_on()
 signal hide_torch()
 
 signal zombie_trapped()
+signal sleep()

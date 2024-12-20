@@ -114,7 +114,7 @@ mesh = SubResource("ArrayMesh_ikpfj")
 skeleton = NodePath("")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera/torch"]
-transform = Transform3D(0.992265, 4.02662e-09, 0.124141, 0.124141, -6.46212e-08, -0.992265, 4.02662e-09, 1, -6.46212e-08, 0, -0.364348, -1.49012e-08)
+transform = Transform3D(0.992265, 4.02662e-09, 0.124141, 0.124141, -6.46212e-08, -0.992265, 4.02662e-09, 1, -6.46213e-08, 0, -0.364348, -1.49012e-08)
 light_energy = 0.6
 spot_angle = 32.0
 
