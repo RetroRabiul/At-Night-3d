@@ -1,8 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://dgae4k5oxamoo"]
+[gd_scene load_steps=13 format=3 uid="uid://dgae4k5oxamoo"]
 
 [ext_resource type="PackedScene" uid="uid://ce7gyejrwvmmh" path="res://scenes/zombie_anim.tscn" id="1_8apxe"]
 [ext_resource type="Script" path="res://scripts/game_over.gd" id="1_yhpkj"]
 [ext_resource type="FontFile" uid="uid://k0lb3q5pibgv" path="res://assets/fonts/Comfortaa/static/Comfortaa-Bold.ttf" id="3_stt4o"]
+[ext_resource type="AudioStream" uid="uid://cql0sltjyhnun" path="res://assets/Audios/Event6.mp3" id="4_ee567"]
+[ext_resource type="AudioStream" uid="uid://b40gxxj4c8s8y" path="res://assets/Audios/button.mp3" id="5_gd1au"]
 
 [sub_resource type="Environment" id="Environment_al0jl"]
 background_mode = 1
@@ -140,6 +142,17 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_6k6si")
 theme_override_styles/normal = SubResource("StyleBoxTexture_6842j")
 text = "Play
 Again"
+
+[node name="BackgroundAudio" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(576, 324)
+stream = ExtResource("4_ee567")
+autoplay = true
+max_distance = 1000.0
+
+[node name="ButtonAudio" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(576, 324)
+stream = ExtResource("5_gd1au")
+max_distance = 13470.0
 
 [connection signal="pressed" from="GameOveUi/Button" to="." method="_on_button_pressed"]
 

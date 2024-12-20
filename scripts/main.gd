@@ -14,10 +14,10 @@ func _lights_on():
 	if GlobalVar.zombie_trapped == false:
 		GlobalSignal.set_narrative.emit(GlobalVar.lights_on_text)
 	elif GlobalVar.zombie_trapped == true:
-		if GlobalVar.ate_fruit == false:
-			GlobalSignal.set_narrative.emit(GlobalVar.eating_text)
-		elif GlobalVar.drink_water == false:
+		if GlobalVar.drink_water == false:
 			GlobalSignal.set_narrative.emit(GlobalVar.drinking_text)
+		elif GlobalVar.ate_fruit == false:
+			GlobalSignal.set_narrative.emit(GlobalVar.eating_text)
 		else:
 			GlobalSignal.set_narrative.emit(GlobalVar.sleeping_text)
 

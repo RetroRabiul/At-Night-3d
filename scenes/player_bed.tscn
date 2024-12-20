@@ -1,4 +1,6 @@
-[gd_scene load_steps=7 format=4 uid="uid://dgyqtpn5ylw7"]
+[gd_scene load_steps=8 format=4 uid="uid://c8c0ne4f07bbb"]
+
+[ext_resource type="Script" path="res://scripts/bed.gd" id="1_2f7rj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_imk8g"]
 resource_name = "Material.002"
@@ -107,8 +109,9 @@ size = Vector3(1.37524, 0.508301, 1.87378)
 
 [node name="Bed" type="Node3D"]
 
-[node name="bed" type="StaticBody3D" parent="."]
+[node name="bed" type="StaticBody3D" parent="." groups=["bed", "highlight"]]
 collision_layer = 3
+script = ExtResource("1_2f7rj")
 
 [node name="Plane_004" type="MeshInstance3D" parent="bed"]
 mesh = SubResource("ArrayMesh_pirgx")

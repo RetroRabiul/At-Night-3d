@@ -44,4 +44,4 @@ func _on_chase_timer_timeout() -> void:
 
 func _on_player_die_area_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player"):
-		print("player died")
+		get_tree().change_scene_to_file("res://scenes/game_over.tscn")

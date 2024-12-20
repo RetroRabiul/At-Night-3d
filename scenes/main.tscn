@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://gcmrssgchw5p"]
+[gd_scene load_steps=35 format=3 uid="uid://gcmrssgchw5p"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_raws0"]
 [ext_resource type="PackedScene" uid="uid://b7gjluyc75skl" path="res://scenes/Player.tscn" id="2_vl77y"]
@@ -7,10 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://dsqpns28m7y41" path="res://scenes/locked_table.tscn" id="6_7oin0"]
 [ext_resource type="PackedScene" uid="uid://bjfr04fbvwfdg" path="res://scenes/table.tscn" id="6_xt4hn"]
 [ext_resource type="PackedScene" uid="uid://c1n57k431sh8t" path="res://scenes/At_Night_HouseLayout.tscn" id="7_445m0"]
-[ext_resource type="PackedScene" uid="uid://c8c0ne4f07bbb" path="res://scenes/Bed.tscn" id="8_lcg03"]
+[ext_resource type="PackedScene" uid="uid://c8c0ne4f07bbb" path="res://scenes/player_bed.tscn" id="8_lcg03"]
 [ext_resource type="PackedScene" uid="uid://c5iq20fe6qjcu" path="res://scenes/Bookshelf.tscn" id="8_siqrw"]
 [ext_resource type="PackedScene" uid="uid://bdolpppkinq7w" path="res://scenes/Toilet.tscn" id="9_x7cfw"]
 [ext_resource type="PackedScene" uid="uid://bv7ljb725rt3k" path="res://scenes/bath.tscn" id="10_kckic"]
+[ext_resource type="PackedScene" uid="uid://dgyqtpn5ylw7" path="res://scenes/bed.tscn" id="10_rqvlg"]
 [ext_resource type="PackedScene" uid="uid://d1og8yo6mo7x0" path="res://scenes/mirror.tscn" id="11_busau"]
 [ext_resource type="PackedScene" uid="uid://76d5xmpbmtxy" path="res://scenes/basin.tscn" id="12_odflg"]
 [ext_resource type="PackedScene" uid="uid://dn36q6yq0ugnn" path="res://scenes/double sofa.tscn" id="13_xsuw2"]
@@ -111,10 +112,10 @@ transform = Transform3D(1.42083, 0, 0, 0, 1.42083, 0, 0, 0, 1.42083, 2.25508, 1.
 [node name="At_Night_HouseLayout" parent="NavigationRegion3D" instance=ExtResource("7_445m0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.78858, 0)
 
-[node name="Bed" parent="NavigationRegion3D" instance=ExtResource("8_lcg03")]
-transform = Transform3D(1.27903, 0, 0, 0, 1.60679, 0, 0, 0, 1.4405, -5.60591, 0.8539, -5.313)
+[node name="player_Bed" parent="NavigationRegion3D" instance=ExtResource("8_lcg03")]
+transform = Transform3D(1.27903, 0, 0, 0, 1.60679, 0, 0, 0, 1.4405, -5.60591, 0.839421, -5.313)
 
-[node name="Bed2" parent="NavigationRegion3D" instance=ExtResource("8_lcg03")]
+[node name="Bed" parent="NavigationRegion3D" instance=ExtResource("10_rqvlg")]
 transform = Transform3D(1.27903, 0, 0, 0, 1.60679, 0, 0, 0, 1.4405, 5.55427, 0.8539, -5.313)
 
 [node name="Toilet" parent="NavigationRegion3D" instance=ExtResource("9_x7cfw")]
