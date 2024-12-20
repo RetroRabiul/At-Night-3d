@@ -3,6 +3,7 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	GlobalVar.reset_variables()
 	$Lights.hide()
 	$Zombie.visible = false
 	GlobalSignal.lights_on.connect(_lights_on)
@@ -48,6 +49,12 @@ func _disable_collision() -> void:
 func _on_trap_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player"):
 		print("player trapped")
+		call_deferred("_change_scene")
+		
 	elif body.is_in_group("zombie"):
 		print("zombie trapped")
 		GlobalSignal.zombie_trapped.emit()
+
+func _change_scene():
+	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
+	

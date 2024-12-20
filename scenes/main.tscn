@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://gcmrssgchw5p"]
+[gd_scene load_steps=34 format=3 uid="uid://gcmrssgchw5p"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_raws0"]
 [ext_resource type="PackedScene" uid="uid://b7gjluyc75skl" path="res://scenes/Player.tscn" id="2_vl77y"]
@@ -23,7 +23,6 @@
 [ext_resource type="PackedScene" uid="uid://ha14evo1yltt" path="res://scenes/trap_door.tscn" id="18_auryj"]
 [ext_resource type="PackedScene" uid="uid://bgcd7u3ukktpm" path="res://scenes/fuse_box.tscn" id="19_8u87t"]
 [ext_resource type="PackedScene" uid="uid://be7hwc3jxgonb" path="res://scenes/kitchen_bottom.tscn" id="19_112f4"]
-[ext_resource type="PackedScene" uid="uid://dfohx82jcshf6" path="res://scenes/key.tscn" id="21_fm2q4"]
 [ext_resource type="PackedScene" uid="uid://hgxhapql7kyy" path="res://scenes/kitchen_top.tscn" id="24_r2c78"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_fcojs"]
@@ -189,10 +188,7 @@ transform = Transform3D(-0.517355, 0, 0.855771, 0, 1, 0, -0.855771, 0, -0.517355
 transform = Transform3D(-1.00061e-07, 0, 2.28913, 0, 2.28913, 0, -2.28913, 0, -1.00061e-07, -3.65776, 0.68343, 3.97712)
 
 [node name="FuseBox" parent="." instance=ExtResource("19_8u87t")]
-transform = Transform3D(-2.81751e-08, 0, 0.644571, 0, 0.644571, 0, -0.644571, 0, -2.81751e-08, -6.32716, 1.97834, 7.6942)
-
-[node name="key" parent="." instance=ExtResource("21_fm2q4")]
-transform = Transform3D(0.0300706, 0, 0.0953717, 0, 0.1, 0, -0.0953717, 0, 0.0300706, -6.41934, 1.69593, 7.53339)
+transform = Transform3D(-2.38227e-08, 0, 0.545, 0, 0.545, 0, -0.545, 0, -2.38227e-08, -6.23353, 2.22764, 7.84194)
 
 [node name="Lights" type="Node3D" parent="."]
 

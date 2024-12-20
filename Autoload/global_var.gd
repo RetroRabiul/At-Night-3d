@@ -60,3 +60,17 @@ var new_fuse_text:Array[Dictionary] = [
 var collect_torch_text:Array[Dictionary] = [
 	{"text": "I can see Now.."}
 ]
+
+func reset_variables():
+	start_zombie_chase = false
+	player_have_key = false
+	torch_collected = false
+	drink_water = false
+	ate_fruit = false
+	fuse_box_opened = false
+	drower_opened = false
+	ket_collected = false
+	trap_opened = false
+	new_fuse_collected = false
+	lights_on = false
+	zombie_trapped = false 
