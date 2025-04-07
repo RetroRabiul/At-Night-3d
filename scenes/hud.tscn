@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://boxatp25iqco5"]
 
-[ext_resource type="Script" path="res://scripts/hud.gd" id="1_q6r5s"]
+[ext_resource type="Script" uid="uid://b342egxfcq8gt" path="res://scripts/hud.gd" id="1_q6r5s"]
 [ext_resource type="FontFile" uid="uid://darxorlc5k5ar" path="res://assets/fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf" id="1_qxyl8"]
 [ext_resource type="Texture2D" uid="uid://cogs80v6n5brs" path="res://assets/target.png" id="3_awvo7"]
 [ext_resource type="Texture2D" uid="uid://doq7wdjdtq8hc" path="res://assets/fuse.png" id="4_bh45k"]

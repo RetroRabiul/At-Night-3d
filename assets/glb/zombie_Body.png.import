@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cx75cs5xt7xlv"
+uid="uid://dw2yec8vyen3c"
 path.s3tc="res://.godot/imported/zombie_Body.png-c7ad6d6a0caf75b9a49aaa3ad0a8d882.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "e6acb157235d972cd6d5eb8f768d4225"
 }
 
 [deps]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dw25jffcvayei"]
 
-[ext_resource type="Script" path="res://scripts/survived.gd" id="1_302aj"]
+[ext_resource type="Script" uid="uid://bddje13yakq4o" path="res://scripts/survived.gd" id="1_302aj"]
 [ext_resource type="Texture2D" uid="uid://drpe71bx82tnb" path="res://assets/sleeping.png" id="1_ptxpl"]
 [ext_resource type="Texture2D" uid="uid://iyqnfes14g63" path="res://assets/torch.png" id="2_ghxp4"]
 [ext_resource type="FontFile" uid="uid://cx5qbw7hfglc7" path="res://assets/fonts/Comfortaa/static/Comfortaa-SemiBold.ttf" id="2_vbp7m"]
@@ -51,8 +51,8 @@ offset_top = 688.0
 offset_right = 1918.0
 offset_bottom = 897.0
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_vbp7m")
 theme_override_font_sizes/font_size = 140
 theme_override_styles/hover = SubResource("StyleBoxTexture_41e7g")

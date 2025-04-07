@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://6734omr4b5ty"]
 
-[ext_resource type="Script" path="res://scripts/zombie2.gd" id="1_dohtj"]
+[ext_resource type="Script" uid="uid://bwid8qvhdrx8j" path="res://scripts/zombie2.gd" id="1_dohtj"]
 [ext_resource type="PackedScene" uid="uid://ce7gyejrwvmmh" path="res://scenes/zombie_anim.tscn" id="2_38d4p"]
 [ext_resource type="AudioStream" uid="uid://bse732u4u30jq" path="res://assets/Audios/zombie.mp3" id="3_irx26"]
 [ext_resource type="AudioStream" uid="uid://cg45etqyva48d" path="res://assets/Audios/footdragging.mp3" id="4_iygan"]
@@ -46,7 +46,7 @@ bones/61/rotation = Quaternion(-0.265959, -0.0686394, -0.0105927, 0.961479)
 bones/62/rotation = Quaternion(0.429676, 0.0677475, 0.102673, 0.894565)
 bones/63/rotation = Quaternion(0.262176, 0.0671196, -0.0182731, 0.96251)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="ZombieCollision" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.148718)
 shape = SubResource("CapsuleShape3D_35w42")
 
@@ -72,7 +72,8 @@ stream = ExtResource("4_iygan")
 
 [node name="Player_Die_Area" type="Area3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player_Die_Area"]
+[node name="PlayerDieCollision" type="CollisionShape3D" parent="Player_Die_Area"]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, -0.104233, 0.994553, 0, -0.994553, -0.104233, 0, 0.459096, -0.399027)
 shape = SubResource("CapsuleShape3D_a2gf4")
 

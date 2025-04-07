@@ -18,4 +18,4 @@ func _on_menu_button_pressed() -> void:
 	call_deferred("_change_scene")
 	
 func _change_scene():
-	get_tree().change_scene_to_file("res://Scenes/menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")

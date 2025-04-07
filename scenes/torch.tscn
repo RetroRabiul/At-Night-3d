@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://c8hu0kdxgvbka"]
 
-[ext_resource type="Script" path="res://scripts/torch.gd" id="1_xvl6f"]
+[ext_resource type="Script" uid="uid://cxwuu0t2cvyh0" path="res://scripts/torch.gd" id="1_xvl6f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mryu5"]
 resource_name = "Material.003"

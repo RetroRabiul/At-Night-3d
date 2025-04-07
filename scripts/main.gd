@@ -31,19 +31,11 @@ func _process(delta: float) -> void:
 
 func _on_zombie_start_chasing_area_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player"):
-		call_deferred("_show_zombie")
 		GlobalVar.start_zombie_chase = true
 		GlobalSignal.set_achievement.emit(GlobalVar.zombie_sound_text)
-		call_deferred("_disable_collision")
+		GlobalSignal.show_zombie.emit()
+		%StartChaseArea.set_deferred("disabled", false)
 
-func _show_zombie():
-	$Zombie.visible = true
-	$Zombie/CollisionShape3D.disabled = false
-	$Zombie/ZombieSound.play()
-	$Zombie/FootDraggingSound.play()
-
-func _disable_collision() -> void:
-	%CollisionShape3D.disabled = true
 
 
 func _on_trap_body_entered(body: Node3D) -> void:

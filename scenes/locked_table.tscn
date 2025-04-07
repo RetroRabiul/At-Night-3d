@@ -1,6 +1,6 @@
 [gd_scene load_steps=38 format=4 uid="uid://dsqpns28m7y41"]
 
-[ext_resource type="Script" path="res://scripts/drower.gd" id="1_vm88i"]
+[ext_resource type="Script" uid="uid://blfqancq1suj6" path="res://scripts/drower.gd" id="1_vm88i"]
 [ext_resource type="PackedScene" uid="uid://bgpina1flq64t" path="res://scenes/new_fuse.tscn" id="2_m6lya"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xo3xd"]
@@ -396,9 +396,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t1aco"]
 _data = {
-&"open_drower": SubResource("Animation_5vklq"),
+&"RESET": SubResource("Animation_1t0y4"),
 &"close_drower": SubResource("Animation_k3tt0"),
-&"RESET": SubResource("Animation_1t0y4")
+&"open_drower": SubResource("Animation_5vklq")
 }
 
 [node name="Locked_Table" type="Node3D"]
