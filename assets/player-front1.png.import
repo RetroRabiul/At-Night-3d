@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csbv8v43r2fr6"
-path.s3tc="res://.godot/imported/double sofa_Blue_leather_Base.jpg-22b3bd0f0463e2e727f0928305f5e3e7.s3tc.ctex"
+uid="uid://dlg34wpxy53te"
+path.s3tc="res://.godot/imported/player-front1.png-ba64b755bb498a3e3f050397f5dd80bf.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/glb/double sofa_Blue_leather_Base.jpg"
-dest_files=["res://.godot/imported/double sofa_Blue_leather_Base.jpg-22b3bd0f0463e2e727f0928305f5e3e7.s3tc.ctex"]
+source_file="res://assets/player-front1.png"
+dest_files=["res://.godot/imported/player-front1.png-ba64b755bb498a3e3f050397f5dd80bf.s3tc.ctex"]
 
 [params]
 

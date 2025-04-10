@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=4 uid="uid://d1og8yo6mo7x0"]
 
-[ext_resource type="Texture2D" uid="uid://ct81ctyadust8" path="res://assets/player.png" id="1_mes8v"]
+[ext_resource type="Texture2D" uid="uid://ct81ctyadust8" path="res://assets/Player.png" id="1_mes8v"]
 [ext_resource type="Script" uid="uid://x8gpa2wsj1c0" path="res://scripts/mirror.gd" id="2_kiwqq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pqid7"]

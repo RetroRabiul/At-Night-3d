@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://6fhu4f2ebxpy"]
 
 [ext_resource type="FontFile" uid="uid://cx5qbw7hfglc7" path="res://assets/fonts/Comfortaa/static/Comfortaa-SemiBold.ttf" id="1_1bmnq"]
-[ext_resource type="Texture2D" uid="uid://ct81ctyadust8" path="res://assets/player.png" id="1_8v4ck"]
+[ext_resource type="Texture2D" uid="uid://ct81ctyadust8" path="res://assets/Player.png" id="1_8v4ck"]
 [ext_resource type="Script" uid="uid://y4q4qobgd1sl" path="res://scripts/menu.gd" id="1_ti26j"]
 [ext_resource type="AudioStream" uid="uid://cql0sltjyhnun" path="res://assets/Audios/Event6.mp3" id="7_b5yyq"]
 [ext_resource type="AudioStream" uid="uid://b40gxxj4c8s8y" path="res://assets/Audios/button.mp3" id="8_22cfe"]
@@ -32,11 +32,12 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 1)
 
-[node name="Player" type="Sprite2D" parent="."]
-modulate = Color(0.329158, 0.329158, 0.329158, 1)
-texture_filter = 1
-position = Vector2(1023, 455)
-scale = Vector2(4.28302, 4.28302)
+[node name="PlayerImg" type="TextureRect" parent="."]
+modulate = Color(0.329412, 0.329412, 0.329412, 1)
+offset_left = 583.0
+offset_top = -136.0
+offset_right = 1468.0
+offset_bottom = 1079.0
 texture = ExtResource("1_8v4ck")
 
 [node name="PlayButton" type="Button" parent="."]
