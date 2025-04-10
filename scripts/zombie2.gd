@@ -13,9 +13,10 @@ func _ready() -> void:
 	hero = get_tree().get_nodes_in_group("player")[0]
 	$ChaseTimer.start()
 	await get_tree().create_timer(1.0).timeout
-	#chasing = true
+	chasing = true
 	GlobalSignal.zombie_trapped.connect(_zombie_trapped)
 	GlobalSignal.show_zombie.connect(_show_zombie)
+
 
 func _zombie_trapped():
 	#$CollisionShape3D.disabled = true
@@ -28,6 +29,7 @@ func _show_zombie():
 	%PlayerDieCollision.set_deferred("disabled", false)
 	$ZombieSound.play()
 	$FootDraggingSound.play()
+
 
 func _move_towards(delta):
 	var targetPos = $NavigationAgent3D.get_next_path_position()

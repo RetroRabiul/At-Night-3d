@@ -1,6 +1,6 @@
 [gd_scene load_steps=38 format=4 uid="uid://dsqpns28m7y41"]
 
-[ext_resource type="Script" uid="uid://blfqancq1suj6" path="res://scripts/drower.gd" id="1_vm88i"]
+[ext_resource type="Script" uid="uid://dfe054rhi4ej3" path="res://scripts/drower.gd" id="1_vm88i"]
 [ext_resource type="PackedScene" uid="uid://bgpina1flq64t" path="res://scenes/new_fuse.tscn" id="2_m6lya"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xo3xd"]

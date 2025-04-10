@@ -1,6 +1,6 @@
 [gd_scene load_steps=33 format=3 uid="uid://gcmrssgchw5p"]
 
-[ext_resource type="Script" uid="uid://df72vcbu6g1mh" path="res://scripts/main.gd" id="1_raws0"]
+[ext_resource type="Script" uid="uid://cof26oghuvsy5" path="res://scripts/main.gd" id="1_raws0"]
 [ext_resource type="PackedScene" uid="uid://b7gjluyc75skl" path="res://scenes/Player.tscn" id="2_vl77y"]
 [ext_resource type="PackedScene" uid="uid://6734omr4b5ty" path="res://scenes/zombie.tscn" id="3_penjs"]
 [ext_resource type="PackedScene" uid="uid://c8hu0kdxgvbka" path="res://scenes/torch.tscn" id="5_wihqu"]
@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bjfr04fbvwfdg" path="res://scenes/table.tscn" id="6_xt4hn"]
 [ext_resource type="PackedScene" uid="uid://c1n57k431sh8t" path="res://scenes/At_Night_HouseLayout.tscn" id="7_445m0"]
 [ext_resource type="PackedScene" uid="uid://c8c0ne4f07bbb" path="res://scenes/player_bed.tscn" id="8_lcg03"]
-[ext_resource type="PackedScene" uid="uid://c5iq20fe6qjcu" path="res://scenes/Bookshelf.tscn" id="8_siqrw"]
+[ext_resource type="PackedScene" uid="uid://c5iq20fe6qjcu" path="res://scenes/bookshelf.tscn" id="8_siqrw"]
 [ext_resource type="PackedScene" uid="uid://bdolpppkinq7w" path="res://scenes/Toilet.tscn" id="9_x7cfw"]
 [ext_resource type="PackedScene" uid="uid://bv7ljb725rt3k" path="res://scenes/bath.tscn" id="10_kckic"]
 [ext_resource type="PackedScene" uid="uid://dgyqtpn5ylw7" path="res://scenes/bed.tscn" id="10_rqvlg"]

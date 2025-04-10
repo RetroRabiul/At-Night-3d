@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://6734omr4b5ty"]
 
-[ext_resource type="Script" uid="uid://bwid8qvhdrx8j" path="res://scripts/zombie2.gd" id="1_dohtj"]
+[ext_resource type="Script" uid="uid://cvj60y3484yod" path="res://scripts/zombie2.gd" id="1_dohtj"]
 [ext_resource type="PackedScene" uid="uid://ce7gyejrwvmmh" path="res://scenes/zombie_anim.tscn" id="2_38d4p"]
 [ext_resource type="AudioStream" uid="uid://bse732u4u30jq" path="res://assets/Audios/zombie.mp3" id="3_irx26"]
 [ext_resource type="AudioStream" uid="uid://cg45etqyva48d" path="res://assets/Audios/footdragging.mp3" id="4_iygan"]
